@@ -1,0 +1,40 @@
+ A Shiny App for Quadratic Expressions
+========================================================
+author: BigBang
+date: `r date()`
+transition: fade
+
+
+Quadratic Expression: What and Why?
+========================================================
+
+A quadratic expression is  second order polynomial:
+
+- $A x^2 + B x + C$, where $A, B, C$ are the coefficients, and $x$ is the independent variable.
+
+- It is the simplest non-linear expression that is frequently useful in modeling data.
+
+Example
+========================================================
+
+```{r}
+A  <- 2
+B  <- 4
+C  <- 6
+x <- seq(1, 10, by = 1)
+y <- A*x^2 + B*x + C
+print(data.frame(x = x, y = y))
+```
+
+Plot
+========================================================
+
+```{r, echo=FALSE}
+plot(x,y, main = 'Example of a Quadratic Expression', type = "b", col = "dark blue", lwd = 10)
+```
+
+Try out the Shiny App
+========================================================
+My Shiny App allows you to play with and evaluate quadratic expression.
+
+Try it: http://cousera.shinyapps.io/Project_Dev_Data_Products
